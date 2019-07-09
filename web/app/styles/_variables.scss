@@ -1,0 +1,24 @@
+
+
+$surface-color: #121212;
+
+$elev_0_dp: 0px;
+$elev_0_overlay: 0.0;
+
+$elev_1_overlay: 0.05;
+
+$elev_2_overlay: 0.07;
+
+.elev_0 {
+    background-color: $surface-color;
+    opacity: $elev_0_overlay;
+}
+
+.elev_1 {
+    background-color: $surface-color;
+    // opacity: $elev_1_overlay;
+}
+
+.elev_2 {
+    // opacity: $elev_2_overlay;
+}

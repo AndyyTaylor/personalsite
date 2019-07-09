@@ -1,0 +1,1 @@
+{"version":3,"file":"static/webpack/static/development/pages/index.js.2a88f4bf80bb7e9c7df9.hot-update.js","sources":["webpack:///./styles/navbar.scss"],"sourcesContent":["module.exports = \".navbar {\\n  width: 200px;\\n  height: 100%; }\\n\""],"mappings":";;;;;;;;;;;;;;AAAA;;;;;A","sourceRoot":""}
