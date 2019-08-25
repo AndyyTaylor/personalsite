@@ -1,24 +1,57 @@
 
 
-$surface-color: #121212;
+$surface-color: rgb(18, 18, 18);
+
+$secondary-color: rgb(3, 218, 197);
 
 $elev_0_dp: 0px;
-$elev_0_overlay: 0.0;
+$elev_0_overlay: 1.0;
 
-$elev_1_overlay: 0.05;
+$elev_1_overlay: 0.95;
 
-$elev_2_overlay: 0.07;
+$elev_2_overlay: 0.6;
+
+@mixin alpha-background-color($color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+    background-color: $solid-color;
+    // background-color: $color;
+}
 
 .elev_0 {
-    background-color: $surface-color;
-    opacity: $elev_0_overlay;
+    @include alpha-background-color(rgba($surface-color, 1), white);
 }
 
 .elev_1 {
-    background-color: $surface-color;
-    // opacity: $elev_1_overlay;
+    @include alpha-background-color(rgba($surface-color, 0.95), white);
 }
 
 .elev_2 {
-    // opacity: $elev_2_overlay;
+    @include alpha-background-color(rgba($surface-color, 0.93), white);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.elev_3 {
+    @include alpha-background-color(rgba($surface-color, 0.92), white);
+}
+
+.elev_4 {
+    @include alpha-background-color(rgba($surface-color, 0.91), white);
+}
+
+.elev_5 {
+    @include alpha-background-color(rgba($surface-color, 0.89), white);
+}
+
+.elev_6 {
+    @include alpha-background-color(rgba($surface-color, 0.88), white);
+}
+
+.elev_7 {
+    @include alpha-background-color(rgba($surface-color, 0.86), white);
+}
+
+.text_surface {
+    color: white;
 }

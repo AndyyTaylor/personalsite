@@ -1,9 +1,9 @@
 
 import { Component } from 'react';
-import indexStyle from "../styles/index.scss";
+import style from "../styles/algorithms.scss";
 import NavBar from "components/NavBar";
 
-class ScreensIndex extends Component {
+class ScreensAlgorithms extends Component {
 
     constructor(...args) {
         super(...args);
@@ -14,11 +14,11 @@ class ScreensIndex extends Component {
     render() {
         return (
             <>
-                <style dangerouslySetInnerHTML={{ __html: indexStyle }} />
+                <style dangerouslySetInnerHTML={{ __html: style }} />
                 <NavBar />
             </>
         )
     }
 }
 
-export default ScreensIndex;
+export default ScreensAlgorithms;

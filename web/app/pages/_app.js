@@ -30,9 +30,10 @@ class MyApp extends App {
                         content="width=device-width, initial-scale=1, shrink-to-fit=no"
                     />
                     <link href='http://fonts.googleapis.com/css?family=Roboto:500,400,100,normal' rel='stylesheet' type='text/css' />
+                    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
                 </Head>
                 <style dangerouslySetInnerHTML={{ __html: appStyle }} />
-                <div className="app">
+                <div className="app elev_0">
                     <Component {...pageProps} />
                 </div>
             </Container>

@@ -1,0 +1,37 @@
+
+@import '_variables.scss';
+
+.navitem {
+    display: flex;
+    height: 51px;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 0px 0px 24px;
+
+    font-size: 18px;
+
+    text-transform: capitalize;
+}
+
+.navitem:hover {
+    @extend .elev_6;
+}
+
+a.navitem {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+
+    // padding: 12px 0px 12px;
+}
+
+.navitem_title {
+    padding: 12px 0px 12px;
+}
+
+.navitem_highlight {
+    width: 4px;
+    height: 100%;
+
+    background-color: $secondary-color;
+}
