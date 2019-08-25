@@ -24,4 +24,4 @@ const start = async (port) => {
     app.listen(port);
 };
 
-start(9001);
+start(process.env.PORT || 9001);
