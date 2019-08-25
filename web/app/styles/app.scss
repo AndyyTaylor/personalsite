@@ -10,3 +10,25 @@ html, body, .app, #__next {
     // opacity: inherit;
     font-family: 'Roboto', sans-serif;
 }
+
+.page_outer {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+}
+
+.page_body {
+    width: calc(100% - 200px);
+    height: 100%;
+
+    padding-left: $body_padding;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-weight: normal;
+    font-size: 42px;
+}

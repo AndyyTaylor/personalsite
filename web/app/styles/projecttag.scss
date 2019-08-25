@@ -1,0 +1,23 @@
+
+// @import '_variables.scss';
+
+.tag_outer {
+    margin: 0px 5px;
+    display: inline;
+}
+
+.projecttag {
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0px 5px;
+
+    border-radius: 4px;
+}
+
+a.projecttag {
+    color: inherit;
+    text-decoration: inherit;
+}

@@ -1,0 +1,13 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="200" fill="#1E1E1E"/>
+<rect x="206.5" y="154.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="206.5" y="73.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="206.5" y="46.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="206.5" y="19.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="20.5" y="85.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="206.5" y="127.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="206.5" y="100.5" width="67" height="27" stroke="white" stroke-width="3"/>
+<rect x="137" y="18" width="19" height="165" fill="#03DAC5"/>
+<path d="M137.707 100.707C138.098 100.317 138.098 99.6834 137.707 99.2929L131.343 92.9289C130.953 92.5384 130.319 92.5384 129.929 92.9289C129.538 93.3195 129.538 93.9526 129.929 94.3431L135.586 100L129.929 105.657C129.538 106.047 129.538 106.681 129.929 107.071C130.319 107.462 130.953 107.462 131.343 107.071L137.707 100.707ZM89 101L137 101L137 99L89 99L89 101Z" fill="white"/>
+<path d="M204.707 60.7071C205.098 60.3166 205.098 59.6834 204.707 59.2929L198.343 52.9289C197.953 52.5384 197.319 52.5384 196.929 52.9289C196.538 53.3195 196.538 53.9526 196.929 54.3431L202.586 60L196.929 65.6569C196.538 66.0474 196.538 66.6805 196.929 67.0711C197.319 67.4616 197.953 67.4616 198.343 67.0711L204.707 60.7071ZM156 61L204 61L204 59L156 59L156 61Z" fill="white"/>
+</svg>

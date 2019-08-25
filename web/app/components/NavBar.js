@@ -21,7 +21,10 @@ class NavBar extends Component {
 
                 <div className="navbar elev_2 text_surface">
                     <NavItem name="home" page="/" />
+                    <NavItem name="screeps" page="/screeps" />
                     <NavItem name="algorithms" page="/algorithms" />
+                    <NavItem name="machine learning" page="/machine_learning" />
+                    <NavItem name="about me" page="/about" />
                 </div>
             </>
         )

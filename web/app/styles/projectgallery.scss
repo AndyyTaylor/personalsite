@@ -1,0 +1,18 @@
+
+@import '_variables.scss';
+
+.container {
+    width: calc(100% - #{$box_margin});
+    margin: 0 auto;
+    // padding-left: 30px;
+    // padding-right: -30px;
+
+    
+}
+
+.grid-row {
+    padding-left: $box_margin;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
