@@ -24,6 +24,9 @@ class ProjectBox extends Component {
     }
 
     handleMouseEnter(e) {
+        if (!this.props.subtitles)
+            return;
+
         this.setState({ isHover: true });
 
         if (this.interval != null)
@@ -43,6 +46,9 @@ class ProjectBox extends Component {
     }
 
     handleMouseLeave(e) {
+        if (!this.props.subtitles)
+            return;
+
         this.setState({ isHover: false });
 
         if (this.interval != null)
@@ -65,19 +71,32 @@ class ProjectBox extends Component {
         const imgWidth = (300 * (1 - this.state.hoverState)) + 'px';
 
         const subtitleElements = [];
-        for (let i = 0; i < this.props.subtitles.length; i++) {
-            subtitleElements.push(
-                <a className="project_subtitle" href={this.props.subtitles[i].pathname} style={{width: (300 - imgWidth) + 'px'}}>
-                    {this.props.subtitles[i].name}
-                </a>
-            )
+        if (this.props.subtitles) {
+            for (let i = 0; i < this.props.subtitles.length; i++) {
+                subtitleElements.push(
+                    <a className="project_subtitle" href={this.props.path + this.props.subtitles[i].path} style={{width: (300 - imgWidth) + 'px'}}>
+                        {this.props.subtitles[i].text}
+                    </a>
+                )
+            }
+        }
+
+        const tags = [];
+        if (this.props.tags) {
+            for (let i = 0; i < this.props.tags.length; i++) {
+                const tag = this.props.tags[i];
+                tags.push(<ProjectTag name={tag} color={0} />);
+            }
+        } else {
+            tags.push(<ProjectTag name="Demo" color={0} />);
+            tags.push(<ProjectTag name="Python" color={1} />)
         }
 
         return (
             <>
                 <style dangerouslySetInnerHTML={{ __html: style }} />
 
-                <a className="projectbox" href={this.props.pathname} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+                <a className="projectbox" href={this.props.path} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                     <div style={{display: 'flex'}}>
                         <img className="project_image" src={this.props.image} style={{width: imgWidth}} />
 
@@ -91,11 +110,10 @@ class ProjectBox extends Component {
 
                     <div className="project_info">
                         <div className="project_tags">
-                            <ProjectTag name="Demo" color={0} />
-                            <ProjectTag name="Python" color={1} />
+                            { tags }
                         </div>
                         <div className="project_name">
-                            {this.props.name}
+                            {this.props.title}
                         </div>
                     </div>
                 </a>

@@ -15,24 +15,20 @@ class ProjectGallery extends Component {
     }
 
     render() {
-        const subtitles = [
-            {
-                name: 'Basic Graph',
-                pathname: '/algorithms/graphs/simple'
-            },
-            {
-                name: 'Digraph',
-                pathname: '/algorithms/graphs/digraph'
-            },
-            {
-                name: 'Weighted Graph',
-                pathname: '/algorithms/graphs/weighted'
-            },
-            {
-                name: 'Weighted Digraph',
-                pathname: '/algorithms/graphs/weighted_digraph'
-            }
-        ];
+        if (!this.props.data)
+            return;
+
+        const projects = [];
+        for (let i = 0; i < this.props.data.length; i++) {
+            const project = this.props.data[i];
+            projects.push(
+                <ProjectBox title={project.title}
+                            path={project.path}
+                            image={project.image}
+                            tags={project.tags}
+                            subtitles={project.subtitles} />
+            )
+        }
 
         return (
             <>
@@ -40,15 +36,7 @@ class ProjectGallery extends Component {
 
                 <div className="container">
                     <div className="grid-row">
-                        <ProjectBox name="Graphs" pathname="/algorithms/graphs" image="/images/graph.svg" subtitles={subtitles} />
-                        <ProjectBox name="Trees" pathname="/algorithms/trees" image="/images/tree.svg" subtitles={subtitles} />
-                        <ProjectBox name="Linked Lists" pathname="/algorithms/lists" image="/images/list.svg" subtitles={subtitles} />
-                        <ProjectBox name="Stacks" pathname="/algorithms/stacks" image="/images/stack.svg" subtitles={subtitles} />
-                        <ProjectBox name="Queues" pathname="/algorithms/queues" image="/images/queue.svg" subtitles={subtitles} />
-                        <ProjectBox name="Tries" pathname="/algorithms/other" image="/images/trie.svg" subtitles={subtitles} />
-                        <ProjectBox name="Hash Tables" pathname="/algorithms/other" image="/images/hash_table.svg" subtitles={subtitles} />
-                        <ProjectBox name="Heaps" pathname="/algorithms/other" image="/images/heap.svg" subtitles={subtitles} />
-                        <ProjectBox name="Arrays" pathname="/algorithms/other" image="/images/array.svg" subtitles={subtitles} />
+                        { projects }
                     </div>
                 </div>
             </>

@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
 
+    color: rgba(255, 255, 255, 0.60);
+
+
     padding: 0px 0px 0px 24px;
 
     font-size: 18px;
@@ -16,10 +19,11 @@
 
 .navitem:hover {
     @extend .elev_6;
+    color: white;
 }
 
 a.navitem {
-    color: inherit; /* blue colors for links too */
+    // color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
 
     // padding: 12px 0px 12px;
@@ -34,4 +38,8 @@ a.navitem {
     height: 100%;
 
     background-color: $secondary-color;
+}
+
+.nav_open {
+    color: white;
 }
